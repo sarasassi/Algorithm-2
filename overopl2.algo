@@ -1,0 +1,19 @@
+overopl2.algo
+ALGORITHM algorithm_overlop
+VAR
+ set1:ARRAY_OF INTEGER[50];
+   set2:ARRAY_OF INTEGER[50];
+    i,j,count : INTEGER;
+
+    sum:INTEGER :=0;
+BEGIN
+    set1 := {3, 1, 7, 9}; 
+    set2 := {2, 4, 1, 9, 3};
+    FOR i FROM 0 TO set1.length-1 STEP 1  DO
+     FOR j FROM 0 TO set2.length-1 STEP 1  DO
+      IF (set1[i]=set2[j]) THEN
+      sum := (sum + set1 [i])*2 
+      END_IF
+      END_FOR
+      END_FOR
+END
